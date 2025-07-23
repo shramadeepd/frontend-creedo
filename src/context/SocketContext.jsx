@@ -13,7 +13,7 @@ export const SocketProvider = ({ children }) => {
     useEffect(() => {
         // In production, Vite serves from the same domain/port as the Express server
         // In development, Express runs on 3000, Vite on 5173 (default)
-        const SERVER_URL = import.meta.env.PROD ? window.location.origin : 'https://creedo-backend.onrender.com/';
+        const SERVER_URL = 'https://creedo-backend.onrender.com/';
         const newSocket = io(SERVER_URL);
         setSocket(newSocket);
 
